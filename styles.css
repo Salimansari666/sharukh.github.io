@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.animation {
+    position: relative;
+    margin-top: 30px;
+    height: 400px;
+}
+
+#sharukhFace {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6), 0 0 80px rgba(0, 255, 255, 0.3);
+}
+
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    pointer-events: none; /* Prevent interaction */
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.3);
+    animation: pulse 3s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.small-circle {
+    width: 150px;
+    height: 150px;
+    animation: rotateReverse 8s infinite linear;
+}
+
+.medium-circle {
+    width: 250px;
+    height: 250px;
+    animation: rotate 12s infinite linear;
+}
+
+.large-circle {
+    width: 350px;
+    height: 350px;
+    animation: rotate 20s infinite linear;
+    border: 3px solid rgba(0, 255, 255, 0.7);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+#output {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #00ffdd;
+    padding: 20px;
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: 10px;
+    background-color: #2c2c2c;
+    display: inline-block;
+    width: 80%;
+}

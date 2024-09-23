@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharukh Voice Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sharukh Voice Assistant</h1>
+        </div>
+
+        <!-- Video and Enhanced Animation -->
+        <div class="animation">
+            <video id="sharukhFace" autoplay loop muted>
+                <source src="path/to/your-animation-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Glowing Circles -->
+            <div class="circle-container">
+                <div class="circle small-circle"></div>
+                <div class="circle medium-circle"></div>
+                <div class="circle large-circle"></div>
+            </div>
+        </div>
+
+        <!-- Control Buttons for Voice Assistance -->
+        <div class="controls">
+            <button id="start-btn">Start Assistance</button>
+            <button id="stop-btn">Stop Assistance</button>
+        </div>
+
+        <!-- Display recognized speech output -->
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
